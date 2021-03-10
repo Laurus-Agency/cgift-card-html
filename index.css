@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body, p {
+  margin: 0;
+  padding: 0;
+}
+
+.card_wrapper {
+  font-family: Inter, sans-serif;
+  max-width: 430px;
+  min-height: 250px;
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(177.23deg, #FFAF41 -13.49%, #CA7500 109.75%);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  border-radius: 20px;
+  display: flex;
+}
+
+.card_left {
+  min-width: 0;
+  background: rgba(57, 57, 57, 0.06);
+  border-radius: 20px 0 0 20px;
+  padding: 30px 8px 30px 30px;
+  text-align: left;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.card_right {
+  min-width: 0;
+  padding: 30px 30px 30px 8px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card_username-wrapper {
+  height: 60px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.card_username {
+  font-weight: normal;
+  font-size: 14px;
+  color: #FFFFFF;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.card_input {
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  height: 38px;
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 14px;
+  padding-left: 12px;
+  font-family: 'Inter', sans-serif;
+  display: block;
+}
+
+.card_input--invalid.card_input--can-validate {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.25), 0 0 0 1px red;
+}
+
+.card_input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.card_input:focus {
+  outline: none;
+}
+
+.card_input-label {
+  font-size: 12px;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.card_right .card_input {
+  width: 100px;
+}
+
+.card_logo {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.card_logo_wrapper {
+  text-align: right;
+}
+
+.expiry_date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100px;
+  width: 100%;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  color: #FFFFFF;
+}
+
+.expiry_date .card_input {
+  width: 45px;
+  text-align: center;
+  margin: 0;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+.card_input_year {
+  padding-left: 0;
+}
+
+.expiry_date input:focus {
+  border: none;
+}
+
+@media (max-width: 450px) {
+  .card_right {
+    padding-right: 10px;
+  }
+
+  .card_left {
+    padding-left: 10px;
+  }
+
+  .expiry_date input {
+    width: 30px;
+  }
+
+  .card_wrapper {
+    border-radius: 10px;
+  }
+}
