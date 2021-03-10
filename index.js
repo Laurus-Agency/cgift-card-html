@@ -4,7 +4,9 @@ function getLogoSrc(value) {
 	const firstChar = value.charAt(0)
 	if (firstChar === '4')
 		return 'visa_logo.svg'
-	return 'mastercard_logo.svg'
+	if (firstChar === '5')
+		return 'mastercard_logo.svg'
+	return ''
 }
 
 function ccFormat(value) {
@@ -26,19 +28,19 @@ const luhnCheck = (function (arr) {
 			len = ccNum.length,
 			bit = 1,
 			sum = 0,
-			val;
+			val
 
 		while (len) {
-			val = parseInt(ccNum.charAt(--len), 10);
-			sum += (bit ^= 1) ? arr[val] : val;
+			val = parseInt(ccNum.charAt(--len), 10)
+			sum += (bit ^= 1) ? arr[val] : val
 		}
 
-		return sum && sum % 10 === 0;
-	};
-}([0, 2, 4, 6, 8, 1, 3, 5, 7, 9]));
+		return sum && sum % 10 === 0
+	}
+}([0, 2, 4, 6, 8, 1, 3, 5, 7, 9]))
 
 function isCardNumberValid(value) {
-	const inputValue = value.replaceAll(/\s/g,'')
+	const inputValue = value.replaceAll(/\s/g, '')
 
 	if (inputValue.length !== 16)
 		return false
