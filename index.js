@@ -3,9 +3,9 @@ const cardNumber = document.getElementById('frmCCNum')
 function getLogoSrc(value) {
 	const firstChar = value.charAt(0)
 	if (firstChar === '4')
-		return 'visa_logo.svg'
+		return 'assets/visa_logo.svg'
 	if (firstChar === '5')
-		return 'mastercard_logo.svg'
+		return 'assets/mastercard_logo.svg'
 	return ''
 }
 
