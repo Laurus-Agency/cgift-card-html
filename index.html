@@ -40,17 +40,17 @@
 						<div>
 							<label class="card_input-label" for="frmCCExp">Expiry Date</label>
 							<div class="expiry_date">
-								<input type="tel" class="card_input" maxlength="2" name="ccmonth" required placeholder="MM"
+								<input type="number" class="card_input" maxlength="2" pattern="\d+" step="1" max="12" min="1" name="ccmonth" required placeholder="MM"
 								       id="frmCCExp"
 								       autocomplete="cc-exp-month"> /
-								<input type="tel" class="card_input card_input_year" maxlength="2" name="ccyear" required
+								<input type="number" class="card_input card_input_year" pattern="\d+" step="1" max="99" min="0" maxlength="2" name="ccyear" required
 								       placeholder="YY"
 								       autocomplete="cc-exp-year">
 							</div>
 
 							<label class="card_input-label" for="frmCCCVC">CVV</label>
 							<input class="card_input" type="password" name="cvc" id="frmCCCVC" required autocomplete="cc-csc"
-							       placeholder="***" maxlength="3" pattern="[0-9]"
+							       placeholder="***" maxlength="3" pattern="^[0-9]{3}$"
 							       inputmode="numeric">
 						</div>
 					</div>
