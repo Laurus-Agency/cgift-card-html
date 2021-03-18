@@ -27,6 +27,7 @@
 						<div>
 							<label class="card_input-label" for="frmCCNum">Card Number</label>
 							<input type="text"
+							       inputmode="numeric"
 							       id="frmCCNum"
 							       class="card_input"
 							       name="cardnumber"
@@ -47,7 +48,8 @@
 						<div>
 							<label class="card_input-label" for="frmCCMonth">Expiry Date</label>
 							<div class="expiry_date card_input">
-								<input type="tel"
+								<input type="text"
+								       inputmode="numeric"
 								       id="frmCCMonth"
 								       class="card_input"
 								       name="ccmonth"
@@ -59,7 +61,8 @@
 								       min="1"
 								       required />
 								<span>/</span>
-								<input type="tel"
+								<input type="text"
+								       inputmode="numeric"
 								       id="frmCCYear"
 								       class="card_input card_input_year"
 								       name="ccyear"
@@ -74,6 +77,7 @@
 
 							<label class="card_input-label" for="frmCCCsc">CVV</label>
 							<input type="password"
+							       inputmode="numeric"
 							       id="frmCCCsc"
 							       class="card_input"
 							       name="csc"
@@ -81,7 +85,6 @@
 							       autocomplete="cc-csc"
 							       maxlength="3"
 							       minlength="3"
-							       inputmode="numeric"
 							       required>
 						</div>
 					</div>
