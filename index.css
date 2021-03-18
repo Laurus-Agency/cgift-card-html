@@ -185,7 +185,7 @@ body {
 .card_button:hover {
   text-decoration: none;
   background-color: rgb(177, 129, 62);
-  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
+  box-shadow: 0 2px 4px -1px rgba(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
 }
 
 .card_wrapper {
@@ -298,11 +298,6 @@ input::-webkit-inner-spin-button {
   margin-bottom: 6px;
   padding-left: 10px;
   padding-right: 10px;
-
-  background: rgba(255, 255, 255, 0.4);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.25);
-  border-radius: 4px;
-  color: #FFFFFF;
 }
 
 .expiry_date .card_input {
@@ -315,11 +310,15 @@ input::-webkit-inner-spin-button {
   padding-left: 0;
 }
 
+.expiry_date .card_input.card_input--can-validate.card_input--invalid {
+  color: red;
+}
+
 .card_input_year {
   padding-left: 0;
 }
 
-.expiry_date input:focus {
+.expiry_date .card_input:focus {
   border: none;
 }
 
