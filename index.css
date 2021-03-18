@@ -183,6 +183,7 @@ body {
 }
 
 .card_button:hover {
+  -webkit-appearance: none;
   text-decoration: none;
   background-color: rgb(177, 129, 62);
   box-shadow: 0 2px 4px -1px rgba(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%);
@@ -243,6 +244,7 @@ input::-webkit-inner-spin-button {
 }
 
 .card_input {
+  -webkit-appearance: none;
   background: rgba(255, 255, 255, 0.4);
   border: none;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.25);
