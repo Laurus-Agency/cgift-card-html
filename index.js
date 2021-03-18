@@ -89,8 +89,8 @@ class CardInput extends Input {
 	}
 
 	static formatCardNumber(value) {
-		const v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '')
-		const matches = v.match(/\d{4,16}/g)
+		const valueDigitsOnly = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '')
+		const matches = valueDigitsOnly.match(/\d{4,16}/g)
 		const match = matches && matches[0] || ''
 		const parts = []
 
@@ -98,7 +98,7 @@ class CardInput extends Input {
 			parts.push(match.substring(i, i + 4))
 		}
 
-		return parts.length ? parts.join(' ') : value
+		return parts.length ? parts.join(' ') : valueDigitsOnly
 	}
 
 	hasValidLength(value) {
@@ -134,6 +134,7 @@ class CSCInput extends Input {
 	onInput(value) {
 		if (this.hasValidLength(value))
 			this.enableValidation()
+		this.setInputValue(value.replace(/\s+/g, '').replace(/[^0-9]/gi, ''))
 	}
 }
 
@@ -169,6 +170,7 @@ class ExpireDateInputBase extends Input {
 	onInput(value) {
 		if (this.hasValidLength(value))
 			this.enableValidation()
+		this.setInputValue(value.replace(/\s+/g, '').replace(/[^0-9]/gi, ''))
 	}
 }
 
